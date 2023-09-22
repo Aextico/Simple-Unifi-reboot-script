@@ -26,5 +26,5 @@ This is a simple script written in C# that reads a list of IP addresses from a t
 
 ```csharp
 string filePath = "path/to/your/ip_addresses.txt";
-string username = "YourSSHUsername";
-string password = "YourSSHPassword";
+string username = "Your Unifi SSHUsername";
+string password = "Your Unifi SSHPassword";
