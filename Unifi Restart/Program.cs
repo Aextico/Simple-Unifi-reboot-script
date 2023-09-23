@@ -12,7 +12,7 @@ namespace Unifi_Restart
     {
         static void Main(string[] args)
         {
-            string filePath = "sciezka/do/pliku.txt";
+            string filePath = "path/to/file.txt";
             string ipadres = "";
 
             try
@@ -24,8 +24,8 @@ namespace Unifi_Restart
                     {
                         ipadres = line;
                         string host = ipadres;
-                        string username = "użytkownikssh";
-                        string password = "HasloSSH";
+                        string username = "sshusername";
+                        string password = "sshpassword";
                         try
                         {
                             using (var client = new SshClient(host, username, password))
@@ -41,6 +41,8 @@ namespace Unifi_Restart
                         catch (Exception)
                         {
                         }
+                        if (ipadres == "") ;
+                            Environment.Exit(0);
                     }
                 }
             }
